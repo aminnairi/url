@@ -178,12 +178,12 @@ getMatchingPathParameters("/users/:user/posts/:post", "/users/123/posts/456");
 
 ## Changelog
 
-See [`CHANGELOG.md`](https://github.com/aminnairi/url/CHANGELOG.md).
+See [`CHANGELOG.md`](https://github.com/aminnairi/url/blob/development/CHANGELOG.md).
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](https://github.com/aminnairi/url/CONTRIBUTING.md).
+See [`CONTRIBUTING.md`](https://github.com/aminnairi/url/blob/development/CONTRIBUTING.md).
 
 ## License
 
-See [`LICENSE`](https://github.com/aminnairi/url/LICENSE).
+See [`LICENSE`](https://github.com/aminnairi/url/blob/development/LICENSE).
