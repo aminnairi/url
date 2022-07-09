@@ -175,3 +175,15 @@ getMatchingPathParameters("/users/:user", "/users/123/posts");
 getMatchingPathParameters("/users/:user/posts/:post", "/users/123/posts/456");
 // {user: "123", post: "456"}
 ```
+
+## Changelog
+
+See [`CHANGELOG.md`](./CHANGELOG.md).
+
+## Contributing
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+## License
+
+See [`LICENSE`](./LICENSE).
