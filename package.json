@@ -1,7 +1,7 @@
 {
   "name": "@aminnairi/url",
   "description": "Match routes and get parameters from urls",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/aminnairi/url#readme",
   "license": "GPL-3.0-or-later",
   "main": "./build/index.common.js",
@@ -18,7 +18,8 @@
     "url": "https://github.com/aminnairi/url.git"
   },
   "scripts": {
-    "development": "rollup --config rollup.config.js",
+    "development": "rollup --config rollup.config.js --environment NODE_ENV:development --watch",
+    "production": "rollup --config rollup.config.js --environment NODE_ENV:production",
     "test": "jest"
   },
   "files": [
@@ -29,6 +30,7 @@
     "@babel/preset-env": "7.18.6",
     "babel-jest": "28.1.2",
     "jest": "28.1.2",
-    "rollup": "2.76.0"
+    "rollup": "2.76.0",
+    "rollup-plugin-terser": "7.0.2"
   }
 }
