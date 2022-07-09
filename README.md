@@ -2,6 +2,8 @@
 
 Utility functions to help you work with urls.
 
+[![Continuous Integration](https://github.com/aminnairi/url/actions/workflows/continuous_integration.yaml/badge.svg)](https://github.com/aminnairi/url/actions/workflows/continuous_integration.yaml)
+
 ## Usage
 
 ### Node
