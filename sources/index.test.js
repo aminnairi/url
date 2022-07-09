@@ -9,6 +9,14 @@ describe("index.js", () => {
     it("should fail", () => {
       expect(isMatchingPath("/", "/users")).toEqual(false);
     });
+
+    it("should fail if the first argument is not a string", () => {
+      expect(isMatchingPath(null, "/users")).toEqual(false);
+    });
+
+    it("should fail if the second argument is not a string", () => {
+      expect(isMatchingPath("/", null)).toEqual(false);
+    });
   });
 
   describe("getMatchingPathParameters", () => {
@@ -30,6 +38,14 @@ describe("index.js", () => {
 
     it("should return an empty object if the route is not parameterized and do not match its url", () => {
       expect(getMatchingPathParameters("/", "/users")).toEqual({});
+    });
+
+    it("should return an empty object if the first argument is not a string", () => {
+      expect(getMatchingPathParameters(null, "/")).toEqual({});
+    });
+
+    it("should return an empty object if the second argument is not a string", () => {
+      expect(getMatchingPathParameters("/", null)).toEqual({});
     });
   });
 });

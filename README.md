@@ -1,5 +1,7 @@
 # @aminnairi/url
 
+Utility functions to help you work with urls.
+
 ## Usage
 
 ### Node
@@ -84,4 +86,90 @@ console.log(getMatchingPathParameters("/users/:user", "/users/123"));
     </script>
   </body>
 </html>
+```
+
+## Documentation
+
+### isMatchingPath
+
+#### Signature
+
+```typescript
+const isMatchingPath = (path: string, url: string) => boolean;
+```
+
+#### Examples
+
+```javascript
+isMatchingPath(null, "/");
+// false
+
+isMatchingPath("/", null);
+// false
+
+isMatchingPath("/", "/");
+// true
+
+isMatchingPath("", "/");
+// true
+
+isMatchingPath("/", "");
+// true
+
+isMatchingPath("/", "/users");
+// false
+
+isMatchingPath("/users/:user", "/users/123");
+// true
+
+isMatchingPath("/users/:user", "/posts/123");
+// false
+
+isMatchingPath("/users/:user", "/users/123/posts");
+// false
+
+isMatchingPath("/users/:user/posts/:post", "/users/123/posts/456");
+// true
+```
+
+### getMatchingPathParameters
+
+#### Signature
+
+```typescript
+const getMatchingPathParameters = (path: string, url: string) => Record<string, string>;
+```
+
+#### Examples
+
+```javascript
+getMatchingPathParameters(null, "/");
+// {}
+
+getMatchingPathParameters("/", null);
+// {}
+
+getMatchingPathParameters("/", "/");
+// {}
+
+getMatchingPathParameters("", "/");
+// {}
+
+getMatchingPathParameters("/", "");
+// {}
+
+getMatchingPathParameters("/", "/users");
+// {}
+
+getMatchingPathParameters("/users/:user", "/users/123");
+// {user: "123"}
+
+getMatchingPathParameters("/users/:user", "/posts/123");
+// {}
+
+getMatchingPathParameters("/users/:user", "/users/123/posts");
+// {}
+
+getMatchingPathParameters("/users/:user/posts/:post", "/users/123/posts/456");
+// {user: "123", post: "456"}
 ```
