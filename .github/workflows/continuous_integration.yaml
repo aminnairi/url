@@ -1,0 +1,21 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  continuous_integration:
+    name: Check that the specification is expected
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm test
