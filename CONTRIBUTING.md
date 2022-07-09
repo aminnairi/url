@@ -11,8 +11,20 @@
 npm install
 ```
 
+## Development
+
+```bash
+npm run development
+```
+
 ## Test
 
 ```bash
 npm test
+```
+
+## Production
+
+```bash
+npm run production
 ```
