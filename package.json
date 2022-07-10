@@ -1,7 +1,7 @@
 {
   "name": "@aminnairi/url",
   "description": "Match routes and get parameters from urls",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/aminnairi/url#readme",
   "license": "GPL-3.0-or-later",
   "main": "./build/index.common.js",
