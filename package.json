@@ -6,6 +6,7 @@
   "license": "GPL-3.0-or-later",
   "main": "./build/index.common.js",
   "browser": "./build/index.browser.js",
+  "module": "./build/index.module.js",
   "bugs": {
     "url": "https://github.com/aminnairi/url/issues"
   },
