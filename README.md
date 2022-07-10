@@ -55,7 +55,7 @@ console.log(getMatchingPathParameters("/users/:user", "/users/123"));
   </head>
   <body>
     <script type="module">
-      import {isMatchingPath, getMatchingPathParameters} from "https://unpkg.com/@aminnairi/url";
+      import {isMatchingPath, getMatchingPathParameters} from "https://unpkg.com/@aminnairi/url?module";
 
       console.log(isMatchingPath("/users/:user", "/users/123"));
 
